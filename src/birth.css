@@ -1,0 +1,111 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    /* font-size: 20px; */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(to right, #c300ff, #0719e1); */
+    background-color: black;
+
+}
+
+#time{
+    display: flex;
+    gap: 30px;
+}
+#time .circle{
+     
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#time .circle svg {
+
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+#time .circle svg circle{
+    width:100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: black;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+#time .circle svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+#time  div {
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.5em;
+
+}
+#time div span{
+    position: absolute;
+    transform: translateX(-50%) , translateY(-50%);
+    display: block;
+    font-size: 0.5em;
+    color: #fff;;
+    font-weight: 100;
+    letter-spacing: 0.3em;
+}
+#time  .dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+}
+#time .dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+   background-color: var(--clr);
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+
+}
+.newYear{
+   
+    font-size: 8em ;
+    font-weight: 500;
+    color: #3e09ff;
+    text-align: center;
+    line-height: 0.6em; ;
+    display: flex;
+  
+}
+.newYear span{
+    font-size: 0.5em;
+    font-weight: 300;
+    
+}
+
+
